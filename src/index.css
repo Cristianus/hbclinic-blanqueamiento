@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HB Clinic Design System - Premium Dental Aesthetic */
+
+@layer base {
+  :root {
+    /* Brand Colors in HSL */
+    --background: 40 5% 97%;
+    --foreground: 212 24% 24%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 212 24% 24%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 24% 24%;
+    
+    /* Primary - Teal */
+    --primary: 189 86% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Light Gray */
+    --secondary: 40 5% 85%;
+    --secondary-foreground: 212 24% 24%;
+    
+    /* Muted */
+    --muted: 40 5% 92%;
+    --muted-foreground: 212 24% 45%;
+    
+    /* Accent - Turquoise Light */
+    --accent: 184 65% 70%;
+    --accent-foreground: 212 24% 24%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 40 5% 85%;
+    --input: 40 5% 85%;
+    --ring: 189 86% 40%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Brand Colors */
+    --hb-dark: 212 24% 24%;
+    --hb-teal: 189 86% 40%;
+    --hb-turquoise: 184 65% 70%;
+    --hb-gray: 40 5% 85%;
+    --hb-white: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(189 86% 40%), hsl(184 65% 55%));
+    --gradient-dark: linear-gradient(180deg, hsl(212 24% 24%), hsl(212 24% 18%));
+    --gradient-subtle: linear-gradient(180deg, hsl(40 5% 97%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(212 24% 24% / 0.95), hsl(189 86% 30% / 0.9));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(212 24% 24% / 0.08);
+    --shadow-md: 0 4px 20px hsl(212 24% 24% / 0.12);
+    --shadow-lg: 0 8px 40px hsl(212 24% 24% / 0.16);
+    --shadow-glow: 0 0 40px hsl(189 86% 40% / 0.25);
+    --shadow-card: 0 4px 24px hsl(212 24% 24% / 0.08);
+    
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 212 24% 12%;
+    --foreground: 40 5% 95%;
+    
+    --card: 212 24% 16%;
+    --card-foreground: 40 5% 95%;
+    
+    --popover: 212 24% 16%;
+    --popover-foreground: 40 5% 95%;
+    
+    --primary: 189 86% 50%;
+    --primary-foreground: 212 24% 12%;
+    
+    --secondary: 212 24% 20%;
+    --secondary-foreground: 40 5% 95%;
+    
+    --muted: 212 24% 18%;
+    --muted-foreground: 40 5% 70%;
+    
+    --accent: 184 65% 60%;
+    --accent-foreground: 212 24% 12%;
+    
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 212 24% 25%;
+    --input: 212 24% 25%;
+    --ring: 189 86% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Texture overlay for backgrounds */
+  .texture-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+  }
+
+  /* Animated gradient background */
+  .gradient-animated {
+    background: linear-gradient(-45deg, hsl(var(--hb-dark)), hsl(var(--hb-teal)), hsl(var(--hb-turquoise)), hsl(var(--hb-dark)));
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Premium card style */
+  .card-premium {
+    @apply bg-card rounded-2xl shadow-[var(--shadow-card)] transition-all duration-300;
+  }
+
+  .card-premium:hover {
+    @apply shadow-[var(--shadow-lg)] -translate-y-1;
+  }
+
+  /* Glow effect on hover */
+  .glow-hover {
+    @apply transition-shadow duration-300;
+  }
+
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Section pattern */
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--hb-teal) / 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Smooth underline animation */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary origin-bottom-right transition-transform duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+}
+
+/* Keyframe animations */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(189 86% 40% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(189 86% 40% / 0.5); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
