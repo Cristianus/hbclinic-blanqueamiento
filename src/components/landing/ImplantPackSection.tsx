@@ -160,6 +160,14 @@ const ImplantPackSection = () => {
 										<span className="text-green-600">✔</span>
 										<span>Protocolos seguros, atención profesional y cupos limitados <span className="font-bold text-destructive">— ¡solo 10 cupos cada mes!</span></span>
 									</li>
+									<li className="text-foreground font-body flex gap-2">
+                    <span className="text-green-600">✔</span>
+                    <span>Paga en cuotas con tarjeta de crédito</span>
+                  </li>
+                  <li className="text-foreground font-body flex gap-2">
+                    <span className="text-green-600">✔</span>
+                    <span>Reembolsa con cualquier seguro complementario</span>
+                  </li>
 								</ul>
 							</div>
 
