@@ -39,12 +39,12 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <h1 className="opacity-0 animate-fade-in animation-delay-100 text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6 text-center">
-              Vuelve a <span className="text-gradient">sonreír, comer y hablar</span> con seguridad.
+              Recupera tu <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">salud</span> y <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">seguridad</span> al <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">sonreír</span>
             </h1>
 
             {/* Subtitle */}
             <p className="opacity-0 animate-fade-in animation-delay-200 text-lg md:text-xl text-muted-foreground font-body leading-relaxed mb-8 max-w-2xl mx-auto text-center">
-              No es solo un diente. Es tu <strong className="font-bold text-foreground">sonrisa</strong>, tu <strong className="font-bold text-foreground">seguridad</strong> y tu <strong className="font-bold text-foreground">tranquilidad</strong>. Diseñamos implantes dentales que se ven, se sienten y funcionan como un diente <strong className="font-bold text-foreground">natural</strong>, utilizando tecnología y materiales premium, con un <strong className="font-bold text-foreground">enfoque humano</strong> para un proceso <strong className="font-bold text-foreground">cómodo</strong>, <strong className="font-bold text-foreground">seguro</strong> y <strong className="font-bold text-foreground">sin dolor</strong>.
+              No es solo un blanqueamiento. Es tu <strong className="font-bold text-foreground">sonrisa</strong>, tu <strong className="font-bold text-foreground">seguridad</strong> y la <strong className="font-bold text-foreground">confianza</strong> con la que te <strong className="font-bold text-foreground">presentas al mundo cada día</strong>. Un protocolo <strong className="font-bold text-foreground">premium</strong>, <strong className="font-bold text-foreground">seguro</strong> y <strong className="font-bold text-foreground">efectivo</strong>, diseñado para lograr resultados en una sola sesión.
             </p>
 
             {/* Video Section */}
